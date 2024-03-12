@@ -1,0 +1,6 @@
+@Visualizesse.API_HostAddress = http://localhost:5056
+
+GET {{Visualizesse.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

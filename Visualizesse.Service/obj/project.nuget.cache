@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "A40LaDXp/XTD80hTlwbhSuf6ENhGSIGH7YRyJWAY82kVZyWnLh6kytZNddEdpZ6i5gi06wxu50p8DN0QVxdaTQ==",
+  "success": true,
+  "projectFilePath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Service/Visualizesse.Service.csproj",
+  "expectedPackageFiles": [
+    "/Users/vagnerwentz/.nuget/packages/mediatr/12.2.0/mediatr.12.2.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/npgsql/8.0.0/npgsql.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
