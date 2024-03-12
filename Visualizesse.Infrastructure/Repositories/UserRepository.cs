@@ -10,6 +10,9 @@ public class UserRepository/**(DatabaseContext databaseContext)**/ : IUserReposi
     public UserRepository()
     {
         _users = new();
+        var user = new User
+            (Guid.Parse("5049b9a6-c45c-4054-9c24-c5bcaa43cf17"), "Carlos", "carlos@gmail.com", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8");
+        _users.Add(user);
     }
     public async Task CreateUserAsync(User user, CancellationToken cancellationToken)
     { 

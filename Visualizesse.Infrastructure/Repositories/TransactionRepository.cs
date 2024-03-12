@@ -15,6 +15,13 @@ public class TransactionRepository
     public TransactionRepository()
     {
         _transactions = new();
+        var transaction = new Transaction(
+            Guid.Parse("c1b1ef5e-44c2-4b37-8310-bec4767cfbc3"), 
+            Guid.Parse("5049b9a6-c45c-4054-9c24-c5bcaa43cf17"), 
+            10, 
+            "Açaí", 
+            "Outcome");
+        _transactions.Add(transaction);
     }
     public async Task DeleteTransactionByIdAsync(Guid id, CancellationToken cancellationToken)
     {

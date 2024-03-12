@@ -15,3 +15,4 @@
 /Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Infrastructure/obj/Debug/net8.0/ref/Visualizesse.Infrastructure.dll
 /Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Infrastructure/bin/Debug/net8.0/Visualizesse.Infrastructure.runtimeconfig.json
 /Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Infrastructure/obj/Debug/net8.0/Visualizesse.Infrastructure.genruntimeconfig.cache
+/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Infrastructure/obj/Debug/net8.0/Visualizesse.Infrastructure.sourcelink.json
