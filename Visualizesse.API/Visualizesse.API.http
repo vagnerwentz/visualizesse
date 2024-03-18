@@ -1,6 +1,31 @@
 @Visualizesse.API_HostAddress = http://localhost:5056
+@x-user-identification = e67f6fe5-6a33-4f2a-8461-826dde835634
 
-GET {{Visualizesse.API_HostAddress}}/weatherforecast/
-Accept: application/json
+POST http://localhost:5056/api/v1/users/register
+Accept: */*
+Content-Type: application/json
+
+{
+  "name": "Ronaldo Vieira",
+  "email": "ronaldo.vieira@gmail.com",
+  "password": "password"
+}
+
+###
+
+GET {{Visualizesse.API_HostAddress}}/api/v1/transactions/mine
+x-user-identification: {{x-user-identification}}
+###
+
+POST http://localhost:5056/api/v1/transactions/create
+Accept: */*
+x-user-identification: {{x-user-identification}}
+Content-Type: application/json
+
+{
+  "value": 30.0,
+  "description": "Transação do Ronaldo",
+  "transactionType": 1
+}
 
 ###

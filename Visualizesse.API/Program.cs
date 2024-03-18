@@ -14,14 +14,15 @@ builder.Services.AddMediatR(
                                     .RegisterServicesFromAssembly(typeof(SignInCommand).Assembly));
 
 builder.Services.AddHttpClient();
-// builder.Services.AddDbContext<DatabaseContext>(
-//     options => options.UseNpgsql(builder.Configuration.GetConnectionString("Visualizesse")));
+builder.Services.AddDbContext<DatabaseContext>(
+    options => options.UseNpgsql(builder.Configuration.GetConnectionString("Visualizesse")));
 
-builder.Services.AddSingleton<IUserRepository, UserRepository>();
-builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
+builder.Services.AddTransient<UserService>();
+builder.Services.AddTransient<TransactionService>();
 
-builder.Services.AddSingleton<ITransactionRepository, TransactionRepository>();
-builder.Services.AddScoped<TransactionService>();
+
 
 
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
