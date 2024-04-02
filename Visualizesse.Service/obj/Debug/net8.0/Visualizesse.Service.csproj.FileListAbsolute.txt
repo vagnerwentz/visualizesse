@@ -14,3 +14,5 @@
 /Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Service/bin/Debug/net8.0/Visualizesse.Domain.pdb
 /Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Service/obj/Debug/net8.0/Visualizesse.Service.csproj.CopyComplete
 /Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Service/obj/Debug/net8.0/Visualizesse.Service.sourcelink.json
+/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Service/bin/Debug/net8.0/Visualizesse.Infrastructure.dll
+/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Service/bin/Debug/net8.0/Visualizesse.Infrastructure.pdb

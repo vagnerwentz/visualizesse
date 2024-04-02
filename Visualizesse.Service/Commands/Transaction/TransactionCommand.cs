@@ -18,4 +18,14 @@ public class TransactionCommand : IRequest<OperationResult>
     
     [Required]
     public ETransaction TransactionType { get; set; }
+    
+    [Required]
+    public DateTime CreatedAt { get; set; }
+    
+    [Required]
+    public int CategoryId { get; set; }
+    
+    public int? SubcategoryId { get; set; }
+    [Required]
+    public Guid WalletId { get; set; }
 }

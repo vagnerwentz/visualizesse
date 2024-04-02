@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IJK6ylQxSJQ8imjwDbv2RI9dcHos3hy8lfMibIwyrcPTTDAycqKD1xNCCbNpr9rObjyBoPkM1nJdr5OPAdaPNg==",
+  "dgSpecHash": "1V8w6Zb2QaZ3kC7qpk5MlPCrC0Kuc+9eXsH3zawAVYV0cxLXmkrV0C0wyf8xm74jSjTjq6/x4xkHzDNuodd8zA==",
   "success": true,
   "projectFilePath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/vagnerwentz/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

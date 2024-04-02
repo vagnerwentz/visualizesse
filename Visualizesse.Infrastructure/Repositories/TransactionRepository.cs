@@ -37,7 +37,7 @@ public class TransactionRepository(DatabaseContext databaseContext) : ITransacti
     public async Task CreateAsync(Transaction transaction, CancellationToken cancellationToken)
     {
         await databaseContext.Transaction.AddAsync(transaction, cancellationToken);
-        await databaseContext.SaveChangesAsync(cancellationToken);
+        // await databaseContext.SaveChangesAsync(cancellationToken);
     }
 
     public async Task<Transaction?> GetTransactionByIdAsync(Guid id, CancellationToken cancellationToken)
@@ -46,9 +46,12 @@ public class TransactionRepository(DatabaseContext databaseContext) : ITransacti
             SingleOrDefaultAsync(t => t.Id == id, cancellationToken); 
     }
 
-    public async Task<List<Transaction>> GetTransactionsAsync(Guid id, CancellationToken cancellationToken)
+    public List<Transaction> GetTransactionsAsync(Guid id, CancellationToken cancellationToken)
     {
-        return databaseContext.Transaction.Where(t => t.UserId == id).AsNoTracking().ToList();
+        return databaseContext.Transaction.Where(t => t.UserId == id)
+            .Include(t => t.Category)
+            .Include(t => t.Subcategory)
+            .AsNoTracking().ToList();
     }
 
     public async Task UpdateTransactionAsync()

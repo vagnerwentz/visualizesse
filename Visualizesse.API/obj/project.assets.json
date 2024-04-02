@@ -1019,6 +1019,9 @@
       "Visualizesse.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MediatR.Contracts": "2.0.1"
+        },
         "compile": {
           "bin/placeholder/Visualizesse.Domain.dll": {}
         },
@@ -1048,7 +1051,8 @@
         "dependencies": {
           "MediatR": "12.2.0",
           "Npgsql": "8.0.0",
-          "Visualizesse.Domain": "1.0.0"
+          "Visualizesse.Domain": "1.0.0",
+          "Visualizesse.Infrastructure": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Visualizesse.Service.dll": {}

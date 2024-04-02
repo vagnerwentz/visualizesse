@@ -10,10 +10,5 @@ public class User(Guid uuid, string name, string email, string password)
     public string Password { get; private set; } = password;
     public DateTime CreatedAt { get; private set; } = DateTime.Now;
     public List<Transaction> Transactions { get; private set; } = new();
+    public List<Wallet> Wallet { get; private set; } = new();
 }
-// public record User(
-//     [Required] Guid UUID, 
-//     [Required] string Name, 
-//     [Required] string Email, 
-//     [Required] string Password,
-//     [Required] DateTime CreatedAt);

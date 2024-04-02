@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Visualizesse.API;
 using Visualizesse.API.Endpoints;
+using Visualizesse.Domain.Event;
 using Visualizesse.Domain.Repositories;
 using Visualizesse.Infrastructure;
 using Visualizesse.Infrastructure.Repositories;
@@ -19,11 +20,14 @@ builder.Services.AddDbContext<DatabaseContext>(
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ISubcategoryRepository, SubcategoryRepository>();
+builder.Services.AddScoped<IWalletRepository, WalletRepository>();
+
 builder.Services.AddTransient<UserService>();
 builder.Services.AddTransient<TransactionService>();
-
-
-
+builder.Services.AddTransient<SubcategoryService>();
+builder.Services.AddTransient<WalletService>();
 
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
@@ -54,5 +58,8 @@ app.MapControllers();
 
 app.RegisterUserEndpoints();
 app.RegisterTransactionEndpoints();
+app.RegisterCategoriesEndpoints();
+app.RegisterSubcategoriesEndpoints();
+app.RegisterWalletEndpoints();
 
 app.Run();

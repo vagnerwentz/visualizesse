@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "9XA26lt8cnAsGc6XvJ9XJChXEZ0KOEiPiDASdQbTOy7n8h2cl8SMjn/NRhv+ITMTp97KhKhM+HsRZhk8ZL+tLA==",
+  "dgSpecHash": "pvnktwVJtqtGba8gTr1uSDkVggf4E+twGXtFIY4cHTxDMCa99nqH1b0MVzDv1inJ6PJQOTNWMACJo+JgD5JhkA==",
   "success": true,
   "projectFilePath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/vagnerwentz/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3/microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.codeanalysis.common/4.5.0/microsoft.codeanalysis.common.4.5.0.nupkg.sha512",

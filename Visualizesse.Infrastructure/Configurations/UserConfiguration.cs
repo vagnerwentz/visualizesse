@@ -9,13 +9,15 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
     public void Configure(EntityTypeBuilder<User> builder)
     {
         builder.HasKey(u => u.Uuid);
-
-        // builder.Property(u => u.Name);
-        // builder.Property(u => u.Email);
-        // builder.Property(u => u.Password);
-        // builder.Property(u => u.CreatedAt);
+        
         builder
             .HasMany(u => u.Transactions)
+            .WithOne()
+            .HasForeignKey(u => u.UserId)
+            .OnDelete(DeleteBehavior.Restrict);
+        
+        builder
+            .HasMany(u => u.Wallet)
             .WithOne()
             .HasForeignKey(u => u.UserId)
             .OnDelete(DeleteBehavior.Restrict);

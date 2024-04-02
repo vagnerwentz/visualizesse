@@ -16,5 +16,17 @@ public class TransactionConfiguration : IEntityTypeConfiguration<Transaction>
         builder.Property(t => t.CreatedAt);
         builder.Property(t => t.Description);
         builder.Property(t => t.TransactionType);
+        builder.HasOne(t => t.Category)
+            .WithMany()
+            .HasForeignKey(t => t.CategoryId)
+            .IsRequired();
+        
+        builder.HasOne(t => t.Subcategory)
+            .WithMany()
+            .HasForeignKey(t => t.SubcategoryId);
+        
+        builder.HasOne(t => t.Wallet)
+            .WithMany()
+            .HasForeignKey(t => t.WalletId);
     }
 }

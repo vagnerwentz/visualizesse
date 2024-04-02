@@ -13,5 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Visualizesse.Domain\Visualizesse.Domain.csproj" />
+    <ProjectReference Include="..\Visualizesse.Infrastructure\Visualizesse.Infrastructure.csproj" />
   </ItemGroup>
 </Project>

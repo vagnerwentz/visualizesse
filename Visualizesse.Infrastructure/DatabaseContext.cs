@@ -13,8 +13,11 @@ public class DatabaseContext : DbContext
 
     public DbSet<User> User { get; set; }
     public DbSet<Transaction> Transaction { get; set; }
+    public DbSet<Category> Category { get; set; }
+    public DbSet<Subcategory> Subcategory { get; set; }
+    public DbSet<Wallet> Wallet { get; set; }
 
-protected override void OnModelCreating(ModelBuilder modelBuilder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }

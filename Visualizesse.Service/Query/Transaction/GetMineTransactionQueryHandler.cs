@@ -9,11 +9,18 @@ public class GetMineTransactionQueryHandler(ITransactionRepository transactionRe
 {
     public async Task<List<TransactionViewModel>> Handle(GetMineTransactionQuery request, CancellationToken cancellationToken)
     {
-        var data = await transactionRepository.GetTransactionsAsync(request.UserId, cancellationToken);
+        var data = transactionRepository.GetTransactionsAsync(request.UserId, cancellationToken);
 
         var transactionViewModel = data
             .Select(t => 
-                new TransactionViewModel(t.Id, t.Description, t.CreatedAt, t.Value))
+                new TransactionViewModel(
+                    t.Id, 
+                    t.Description, 
+                    t.CreatedAt, 
+                    t.Value,
+                    t.TransactionType,
+                    t.Category.Description,
+                    t.Subcategory?.Description))
             .ToList();
 
         return transactionViewModel;

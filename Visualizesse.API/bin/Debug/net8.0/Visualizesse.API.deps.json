@@ -583,6 +583,9 @@
       },
       "System.Threading.Channels/6.0.0": {},
       "Visualizesse.Domain/1.0.0": {
+        "dependencies": {
+          "MediatR.Contracts": "2.0.1"
+        },
         "runtime": {
           "Visualizesse.Domain.dll": {}
         }
@@ -602,7 +605,8 @@
         "dependencies": {
           "MediatR": "12.2.0",
           "Npgsql": "8.0.0",
-          "Visualizesse.Domain": "1.0.0"
+          "Visualizesse.Domain": "1.0.0",
+          "Visualizesse.Infrastructure": "1.0.0"
         },
         "runtime": {
           "Visualizesse.Service.dll": {}

@@ -10,3 +10,4 @@
 /Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/obj/Debug/net8.0/Visualizesse.Domain.pdb
 /Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/obj/Debug/net8.0/ref/Visualizesse.Domain.dll
 /Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/obj/Debug/net8.0/Visualizesse.Domain.sourcelink.json
+/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/obj/Debug/net8.0/Visualizesse.Domain.csproj.AssemblyReference.cache
