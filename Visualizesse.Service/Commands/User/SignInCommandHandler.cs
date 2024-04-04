@@ -1,45 +1,29 @@
 using System.Net;
 using MediatR;
-using Npgsql;
 using Visualizesse.Domain.Exceptions;
-using UserEntity = Visualizesse.Domain.Entities.User;
-using Visualizesse.Domain.Helpers;
 using Visualizesse.Domain.Repositories;
+using Visualizesse.Domain.Services;
 
 namespace Visualizesse.Service.Commands.User;
 
-public class SignInCommandHandler : IRequestHandler<SignInCommand, OperationResult>
+public class SignInCommandHandler(
+    IAuthService authService,
+    IUserRepository userRepository
+) : IRequestHandler<SignInCommand, OperationResult>
 {
-    private readonly IUserRepository _userRepository;
-    
-    public SignInCommandHandler(IUserRepository userRepository)
-    {
-        _userRepository = userRepository;
-    }
-
     public async Task<OperationResult> Handle(SignInCommand request, CancellationToken cancellationToken)
     {
-        try
-        {
-            var emailAlreadyExists = await _userRepository.FindEmailAsync(request.Email,cancellationToken);
+        var user = await userRepository.FindUserByEmailAsync(request.Email, cancellationToken);
 
-            if (emailAlreadyExists) return OperationResult.FailureResult("E-mail is already in use.", HttpStatusCode.Conflict);
+        if (user is null) 
+            return OperationResult.FailureResult("Please, verify if you are typing the e-mail and password correctly.", HttpStatusCode.BadRequest);
 
-            var encrypted = EncryptationManager.Encrypt(request.Password);
-            
-            var user = new UserEntity(Guid.NewGuid(), request.Name, request.Email, encrypted);
+        var isEqual = authService.CompareComputedSHA256Hash(request.Password, user.Password);
 
-            await _userRepository.CreateUserAsync(user, cancellationToken);
+        if (!isEqual) return OperationResult.FailureResult("Please, verify if you are typing the e-mail and password correctly.", HttpStatusCode.BadRequest);
+        
+        var token = authService.GenerateJWTToken(user);
 
-            return OperationResult.SuccessResult(user, HttpStatusCode.Created);
-        }
-        catch (InvalidOperationException exception)
-        {
-            return OperationResult.ExceptionResult(exception.ToString(), exception.Message, HttpStatusCode.BadRequest);
-        }
-        catch (Exception exception)
-        {
-            return OperationResult.ExceptionResult(exception.ToString(), exception.Message, HttpStatusCode.InternalServerError);
-        }
+        return OperationResult.SuccessResult(token, HttpStatusCode.Accepted);
     }
 }

@@ -113,3 +113,11 @@
 /Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/bin/Debug/net8.0/Swashbuckle.AspNetCore.Annotations.dll
 /Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/obj/Debug/net8.0/Visualizesse.API.sourcelink.json
+/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

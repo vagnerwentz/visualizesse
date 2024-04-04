@@ -1,11 +1,10 @@
 using MediatR;
-using System.ComponentModel.DataAnnotations;
 using Visualizesse.Domain.Exceptions;
 
 namespace Visualizesse.Service.Commands.User;
 
-public record SignInCommand(
-    [Required] string Name, 
-    [Required] string Email, 
-    [Required] string Password
-) : IRequest<OperationResult>;
+public class SignInCommand(string email, string password) : IRequest<OperationResult>
+{
+    public string Email { get; private set; } = email;
+    public string Password { get; private set; } = password;
+}

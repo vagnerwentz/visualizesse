@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KwL2664Db83Y9aTuEXnVdfVFvd3STgXryOYcYydpBpSr4nAENU/kpx3f7wqJ2c089YuwljbmIpJhC3jO2n+2hQ==",
+  "dgSpecHash": "T+VbfuyzC6VlzeSyM8nI78PCGccpUV/adrwoNjhqwvS/CBh6Amu01pc5qteoQcjqdmvSVRvnlYqPyFwRWIaSsQ==",
   "success": true,
   "projectFilePath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Service/Visualizesse.Service.csproj",
   "expectedPackageFiles": [
@@ -19,8 +19,13 @@
     "/Users/vagnerwentz/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/microsoft.identitymodel.abstractions/7.5.0/microsoft.identitymodel.abstractions.7.5.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.5.0/microsoft.identitymodel.jsonwebtokens.7.5.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/microsoft.identitymodel.logging/7.5.0/microsoft.identitymodel.logging.7.5.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/microsoft.identitymodel.tokens/7.5.0/microsoft.identitymodel.tokens.7.5.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/npgsql/8.0.0/npgsql.8.0.0.nupkg.sha512",
-    "/Users/vagnerwentz/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.0/npgsql.entityframeworkcore.postgresql.8.0.0.nupkg.sha512"
+    "/Users/vagnerwentz/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.0/npgsql.entityframeworkcore.postgresql.8.0.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/system.identitymodel.tokens.jwt/7.5.0/system.identitymodel.tokens.jwt.7.5.0.nupkg.sha512"
   ],
   "logs": []
 }

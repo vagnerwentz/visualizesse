@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pvnktwVJtqtGba8gTr1uSDkVggf4E+twGXtFIY4cHTxDMCa99nqH1b0MVzDv1inJ6PJQOTNWMACJo+JgD5JhkA==",
+  "dgSpecHash": "gIzKiI0jqgtU+P82rfYGi2ifzBCwrUZs23D6ANT1oaMV94epO5d+STQ4AVmtHtxnhLiJ8E39g1Hfov+qVptyVQ==",
   "success": true,
   "projectFilePath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,10 @@
     "/Users/vagnerwentz/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/microsoft.identitymodel.abstractions/7.5.0/microsoft.identitymodel.abstractions.7.5.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.5.0/microsoft.identitymodel.jsonwebtokens.7.5.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/microsoft.identitymodel.logging/7.5.0/microsoft.identitymodel.logging.7.5.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/microsoft.identitymodel.tokens/7.5.0/microsoft.identitymodel.tokens.7.5.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/npgsql/8.0.0/npgsql.8.0.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.0/npgsql.entityframeworkcore.postgresql.8.0.0.nupkg.sha512",
@@ -38,6 +42,7 @@
     "/Users/vagnerwentz/.nuget/packages/system.composition.hosting/6.0.0/system.composition.hosting.6.0.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/system.composition.runtime/6.0.0/system.composition.runtime.6.0.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/system.composition.typedparts/6.0.0/system.composition.typedparts.6.0.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/system.identitymodel.tokens.jwt/7.5.0/system.identitymodel.tokens.jwt.7.5.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/system.io.pipelines/6.0.3/system.io.pipelines.6.0.3.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/system.reflection.metadata/6.0.1/system.reflection.metadata.6.0.1.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
