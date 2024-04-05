@@ -48,6 +48,7 @@ public static class TransactionEndpoints
             TransactionService transactionService,
             [FromBody] DeleteTransactionCommand data
         ) => await transactionService.DeleteTransactionByIdAsync(data))
+            .RequireAuthorization()
             .WithOpenApi(operation => new(operation)
         {
             Summary = "Você pode deletar uma transação..",

@@ -18,7 +18,7 @@ public class Transaction(
     
     public int CategoryId { get; private set; } = categoryId;
     public int? SubcategoryId { get; private set; } = subcategoryId;
-    public Guid? WalletId { get; set; }
+    public Guid WalletId { get; set; }
     public decimal Value { get; private set; } = value;
     public string? Description { get; private set; } = description;
     public string TransactionType { get; private set; } = transactionType;
