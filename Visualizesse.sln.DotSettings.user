@@ -1,2 +1,13 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3eedb7ba_002D6601_002D49c8_002D943e_002D2a098bac5c01/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Register_ShouldCreateUser" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::D082CCD2-6A66-4DF7-AD6E-483CC1E6FEA2::net8.0::PoupaGasto.IntegrationTest.RegisterUserTests.Register_ShouldCreateUser&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::D082CCD2-6A66-4DF7-AD6E-483CC1E6FEA2::net8.0::PoupaGasto.IntegrationTest.BasicTests.Get_EndpointsReturnSuccessAndCorrectContentType&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4fad7132_002De7f8_002D43f2_002D9c7c_002Dd7ce413f4ac3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Register_ShouldCreateUser #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::D082CCD2-6A66-4DF7-AD6E-483CC1E6FEA2::net8.0::PoupaGasto.IntegrationTest.RegisterUserTests.Register_ShouldCreateUser&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Visualizesse/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
