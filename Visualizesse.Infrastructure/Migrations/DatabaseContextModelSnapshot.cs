@@ -40,6 +40,28 @@ namespace Visualizesse.Infrastructure.Migrations
                     b.ToTable("Category");
                 });
 
+            modelBuilder.Entity("Visualizesse.Domain.Entities.Session", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Session");
+                });
+
             modelBuilder.Entity("Visualizesse.Domain.Entities.Subcategory", b =>
                 {
                     b.Property<int>("Id")
@@ -162,6 +184,17 @@ namespace Visualizesse.Infrastructure.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Wallet");
+                });
+
+            modelBuilder.Entity("Visualizesse.Domain.Entities.Session", b =>
+                {
+                    b.HasOne("Visualizesse.Domain.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Visualizesse.Domain.Entities.Subcategory", b =>
