@@ -53,15 +53,14 @@ public class TransactionCommandHandler(
                 request.UserId,
                 request.WalletId,
                 request.Value,
-                request.TransactionType
+                request.TransactionType.ToString(),
+                null
             );
 
             await publisher.Publish(updateWalletBalanceEventRequest, cancellationToken);
 
             await databaseContext.SaveChangesAsync(cancellationToken);
             await transaction.CommitAsync(cancellationToken);
-
-            // Notificar para adicionar/retirar do balanço geral.
 
             return OperationResult.SuccessResult(HttpStatusCode.Created);
         }

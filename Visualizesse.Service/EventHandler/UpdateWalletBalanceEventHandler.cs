@@ -14,19 +14,31 @@ public class UpdateWalletBalanceEventHandler(DatabaseContext databaseContext) : 
     {
         var wallet = await databaseContext.Wallet
             .SingleOrDefaultAsync(w => w.UserId == notification.UserId && w.Id == notification.WalletId, cancellationToken);
-        
-        // var wallet = await walletRepository.GetWalletByUserIdAsync(notification.WalletId, cancellationToken);
 
         if (wallet is null || wallet.UserId != notification.UserId)
             throw new UnauthorizedException("Wallet not found or unauthorized access.", HttpStatusCode.Unauthorized);
 
-        if (notification.TransactionType == ETransaction.Income)
+        if (notification.Event is "DELETION")
         {
-            wallet!.Balance += notification.Amount;
+            if (notification.TransactionType == ETransaction.Income.ToString())
+            {
+                wallet!.Balance -= notification.Amount;
+            }
+            else
+            {
+                wallet!.Balance += notification.Amount;
+            }    
         }
         else
         {
-            wallet!.Balance -= notification.Amount;
+            if (notification.TransactionType == ETransaction.Income.ToString())
+            {
+                wallet!.Balance += notification.Amount;
+            }
+            else
+            {
+                wallet!.Balance -= notification.Amount;
+            }    
         }
     }
 }
