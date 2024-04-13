@@ -57,6 +57,14 @@ public class AuthService(IConfiguration configuration) : IAuthService
         }
     }
 
+    public IEnumerable<Claim> ReadJWTToken(string token)
+    {
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var jwtToken = tokenHandler.ReadJwtToken(token);
+
+        return jwtToken.Claims;
+    }
+
     public bool CompareComputedSHA256Hash(string password, string hashedPassword)
     {
         return hashedPassword == ComputeSHA256Hash(password);

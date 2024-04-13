@@ -16,6 +16,7 @@ public class DatabaseContext : DbContext
     public DbSet<Category> Category { get; set; }
     public DbSet<Subcategory> Subcategory { get; set; }
     public DbSet<Wallet> Wallet { get; set; }
+    public DbSet<Session> Session { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

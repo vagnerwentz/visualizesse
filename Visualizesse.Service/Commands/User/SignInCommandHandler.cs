@@ -8,22 +8,33 @@ namespace Visualizesse.Service.Commands.User;
 
 public class SignInCommandHandler(
     IAuthService authService,
-    IUserRepository userRepository
+    IUserRepository userRepository,
+    ISessionRepository sessionRepository
 ) : IRequestHandler<SignInCommand, OperationResult>
 {
     public async Task<OperationResult> Handle(SignInCommand request, CancellationToken cancellationToken)
     {
-        var user = await userRepository.FindUserByEmailAsync(request.Email, cancellationToken);
+        try
+        {
+            var user = await userRepository.FindUserByEmailAsync(request.Email, cancellationToken);
 
-        if (user is null) 
-            return OperationResult.FailureResult("Please, verify if you are typing the e-mail and password correctly.", HttpStatusCode.BadRequest);
+            if (user is null) 
+                return OperationResult.FailureResult("Please, verify if you are typing the e-mail and password correctly.", HttpStatusCode.BadRequest);
 
-        var isEqual = authService.CompareComputedSHA256Hash(request.Password, user.Password);
+            var isEqual = authService.CompareComputedSHA256Hash(request.Password, user.Password);
 
-        if (!isEqual) return OperationResult.FailureResult("Please, verify if you are typing the e-mail and password correctly.", HttpStatusCode.BadRequest);
+            if (!isEqual) return OperationResult.FailureResult("Please, verify if you are typing the e-mail and password correctly.", HttpStatusCode.BadRequest);
         
-        var token = authService.GenerateJWTToken(user);
+            var token = authService.GenerateJWTToken(user);
+            
+            await sessionRepository.CreateSessionAsync(new Domain.Entities.Session(token, user.Uuid));
 
-        return OperationResult.SuccessResult(token, HttpStatusCode.Accepted);
+            return OperationResult.SuccessResult(token, HttpStatusCode.Accepted);
+        }
+        catch (Exception exception)
+        {
+            return OperationResult.ExceptionResult(exception.ToString(), exception.Message,
+                HttpStatusCode.InsufficientStorage);
+        }
     }
 }
