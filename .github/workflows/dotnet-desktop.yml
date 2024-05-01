@@ -8,7 +8,7 @@ on:
 
 jobs:
   build_and_test:
-    runs-on: windows-latest  # ou ubuntu-latest, dependendo do seu projeto
+    runs-on: ubuntu-latest  # ou ubuntu-latest, dependendo do seu projeto
 
     steps:
     - uses: actions/checkout@v2
