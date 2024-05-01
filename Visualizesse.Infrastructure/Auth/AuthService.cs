@@ -11,7 +11,7 @@ namespace Visualizesse.Infrastructure.Auth;
 
 public class AuthService(IConfiguration configuration) : IAuthService
 {
-    private readonly DateTime expiresAt = DateTime.Now.AddMinutes(30)
+    private readonly DateTime expiresAt = DateTime.Now.AddMinutes(30);
     public string GenerateJWTToken(User user)
     {
         var key = configuration["JWT:Key"];
