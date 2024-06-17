@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visualizesse.Service", "Vis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visualizesse.Infrastructure", "Visualizesse.Infrastructure\Visualizesse.Infrastructure.csproj", "{3532A030-AA0E-4987-98E1-8563B4B9CCE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoupaGasto.UnitTest", "PoupaGasto.UnitTest\PoupaGasto.UnitTest.csproj", "{B107637C-30AA-4973-9A08-68966FE4D66D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoupaGasto.IntegrationTest", "PoupaGasto.IntegrationTest\PoupaGasto.IntegrationTest.csproj", "{7805B13F-0B51-4D19-89FC-6F95866871E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{3532A030-AA0E-4987-98E1-8563B4B9CCE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3532A030-AA0E-4987-98E1-8563B4B9CCE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3532A030-AA0E-4987-98E1-8563B4B9CCE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B107637C-30AA-4973-9A08-68966FE4D66D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B107637C-30AA-4973-9A08-68966FE4D66D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B107637C-30AA-4973-9A08-68966FE4D66D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B107637C-30AA-4973-9A08-68966FE4D66D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7805B13F-0B51-4D19-89FC-6F95866871E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7805B13F-0B51-4D19-89FC-6F95866871E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7805B13F-0B51-4D19-89FC-6F95866871E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7805B13F-0B51-4D19-89FC-6F95866871E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
