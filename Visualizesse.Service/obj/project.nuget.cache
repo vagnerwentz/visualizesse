@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "T+VbfuyzC6VlzeSyM8nI78PCGccpUV/adrwoNjhqwvS/CBh6Amu01pc5qteoQcjqdmvSVRvnlYqPyFwRWIaSsQ==",
+  "dgSpecHash": "KIHWwjsvRFKngp0l1k9BhEBHATe9CVVIU+MvnB3CdrylxFNX/z+QOhTGC8ABfRAiiIu82XqMAkny5u+CVCFvCg==",
   "success": true,
-  "projectFilePath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Service/Visualizesse.Service.csproj",
+  "projectFilePath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Service/Visualizesse.Service.csproj",
   "expectedPackageFiles": [
+    "/Users/vagnerwentz/.nuget/packages/fluentvalidation/11.9.2/fluentvalidation.11.9.2.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/mediatr/12.2.0/mediatr.12.2.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.entityframeworkcore/8.0.0/microsoft.entityframeworkcore.8.0.0.nupkg.sha512",
@@ -23,9 +24,21 @@
     "/Users/vagnerwentz/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.5.0/microsoft.identitymodel.jsonwebtokens.7.5.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.identitymodel.logging/7.5.0/microsoft.identitymodel.logging.7.5.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.identitymodel.tokens/7.5.0/microsoft.identitymodel.tokens.7.5.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/npgsql/8.0.0/npgsql.8.0.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.0/npgsql.entityframeworkcore.postgresql.8.0.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/system.identitymodel.tokens.jwt/7.5.0/system.identitymodel.tokens.jwt.7.5.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Npgsql' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-x9vc-6hfv-hg8c",
+      "libraryId": "Npgsql",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

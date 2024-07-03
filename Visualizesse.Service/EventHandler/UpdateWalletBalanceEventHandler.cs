@@ -17,28 +17,28 @@ public class UpdateWalletBalanceEventHandler(DatabaseContext databaseContext) : 
 
         if (wallet is null || wallet.UserId != notification.UserId)
             throw new UnauthorizedException("Wallet not found or unauthorized access.", HttpStatusCode.Unauthorized);
+        
+        switch (notification.Event)
+        {
+            case "DELETION" when notification.TransactionType == ETransaction.Income.ToString():
+                wallet!.Balance -= notification.Amount;
+                break;
+            case "DELETION":
+                wallet!.Balance += notification.Amount;
+                break;
+            default:
+            {
+                if (notification.TransactionType == ETransaction.Income.ToString())
+                {
+                    wallet!.Balance += notification.Amount;
+                }
+                else
+                {
+                    wallet!.Balance -= notification.Amount;
+                }
 
-        if (notification.Event is "DELETION")
-        {
-            if (notification.TransactionType == ETransaction.Income.ToString())
-            {
-                wallet!.Balance -= notification.Amount;
+                break;
             }
-            else
-            {
-                wallet!.Balance += notification.Amount;
-            }    
-        }
-        else
-        {
-            if (notification.TransactionType == ETransaction.Income.ToString())
-            {
-                wallet!.Balance += notification.Amount;
-            }
-            else
-            {
-                wallet!.Balance -= notification.Amount;
-            }    
         }
     }
 }

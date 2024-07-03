@@ -26,32 +26,15 @@ public class CustomWebApplicationFactory<TProgram>
             });
             
             // Crie um ServiceProvider temporário para aplicar migrations
-            var sp = services.BuildServiceProvider();
-            using (var scope = sp.CreateScope())
+            var serviceProvider = services.BuildServiceProvider();
+            using (var scope = serviceProvider.CreateScope())
             {
                 var db = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
-                db.Database.Migrate();  // Aplica as migrations
-            }
-            
-            using (var scope = sp.CreateScope())
-            {
-                var db = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
-                if (db.Database.EnsureCreated())
-                {
-                    InitializeDatabaseForTests(db);
-                }
+                db.Database.EnsureCreated();
+                db.Database.Migrate();
             }
         });
 
         builder.UseEnvironment("Development");
-    }
-
-    private void InitializeDatabaseForTests(DatabaseContext database)
-    {
-        database.Category.AddRange(
-            new Category(1, "Transporte"),
-            new Category(2, "Alimentação")
-        );
-        database.SaveChanges();
     }
 }

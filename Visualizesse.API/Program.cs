@@ -90,6 +90,16 @@ builder.Services
         };
     });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAnyOrigin", builder =>
+    {
+        builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -99,6 +109,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
@@ -106,10 +117,14 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseCors("AllowAnyOrigin");
+
 app.RegisterUserEndpoints();
-app.RegisterTransactionEndpoints();
 app.RegisterCategoriesEndpoints();
 app.RegisterSubcategoriesEndpoints();
 app.RegisterWalletEndpoints();
+app.RegisterTransactionEndpoints();
 
 app.Run();
+
+public partial class Program { }

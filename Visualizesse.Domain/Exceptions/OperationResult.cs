@@ -8,33 +8,36 @@ namespace Visualizesse.Domain.Exceptions;
 
 public class OperationResult
 {
-    public bool Success { get; protected set; }
-    public string Message { get; protected set; }
-    public string Exception { get; protected set; }
-    public object Data { get; protected set; }
-    public HttpStatusCode StatusCode { get; protected set; }
+    public bool Success { get; set; }
+    public string Message { get; set; }
+    public string Exception { get; set; }
+    public object Data { get; set; }
+    public HttpStatusCode StatusCode { get; set; }
     
-    protected OperationResult(HttpStatusCode statusCode)
+    // Adicionando um construtor público padrão
+    public OperationResult() {}
+    
+    public OperationResult(HttpStatusCode statusCode)
     {
         Success = true;
         StatusCode = statusCode;
     }
     
-    protected OperationResult(object data, HttpStatusCode statusCode)
+    public OperationResult(object data, HttpStatusCode statusCode)
     {
         Success = true;
         StatusCode = statusCode;
         Data = data;
     }
 
-    protected OperationResult(string message, HttpStatusCode statusCode)
+    public OperationResult(string message, HttpStatusCode statusCode, bool success = false)
     {
-        Success = false;
+        Success = success;
         Message = message;
         StatusCode = statusCode;
     }
 
-    protected OperationResult(string exception, string? message, HttpStatusCode statusCode)
+    public OperationResult(string exception, string? message, HttpStatusCode statusCode)
     {
         Success = false;
         Exception = exception;
@@ -44,12 +47,17 @@ public class OperationResult
     
     public static OperationResult SuccessResult(HttpStatusCode statusCode)
     {
-        return new OperationResult(statusCode);
+        return new OperationResult { StatusCode = statusCode, Success = true};
     }
     
     public static OperationResult SuccessResult(object data, HttpStatusCode statusCode)
     {
         return new OperationResult(data, statusCode);
+    }
+    
+    public static OperationResult SuccessResult(string message, HttpStatusCode statusCode)
+    {
+        return new OperationResult(message, statusCode, true);
     }
     
     

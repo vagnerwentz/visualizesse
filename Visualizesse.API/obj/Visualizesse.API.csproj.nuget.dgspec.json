@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/Visualizesse.API.csproj": {}
+    "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.API/Visualizesse.API.csproj": {}
   },
   "projects": {
-    "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/Visualizesse.API.csproj": {
+    "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.API/Visualizesse.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/Visualizesse.API.csproj",
+        "projectUniqueName": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.API/Visualizesse.API.csproj",
         "projectName": "Visualizesse.API",
-        "projectPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/Visualizesse.API.csproj",
+        "projectPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.API/Visualizesse.API.csproj",
         "packagesPath": "/Users/vagnerwentz/.nuget/packages/",
-        "outputPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.API/obj/",
+        "outputPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vagnerwentz/.nuget/NuGet/NuGet.Config"
@@ -26,14 +26,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj": {
-                "projectPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj"
+              "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj": {
+                "projectPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj"
               },
-              "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj": {
-                "projectPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj"
+              "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj": {
+                "projectPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj"
               },
-              "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Service/Visualizesse.Service.csproj": {
-                "projectPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Service/Visualizesse.Service.csproj"
+              "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Service/Visualizesse.Service.csproj": {
+                "projectPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Service/Visualizesse.Service.csproj"
               }
             }
           }
@@ -102,14 +102,14 @@
         }
       }
     },
-    "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj": {
+    "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj",
+        "projectUniqueName": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj",
         "projectName": "Visualizesse.Domain",
-        "projectPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj",
+        "projectPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj",
         "packagesPath": "/Users/vagnerwentz/.nuget/packages/",
-        "outputPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/obj/",
+        "outputPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vagnerwentz/.nuget/NuGet/NuGet.Config"
@@ -139,6 +139,10 @@
             "MediatR.Contracts": {
               "target": "Package",
               "version": "[2.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             }
           },
           "imports": [
@@ -161,14 +165,14 @@
         }
       }
     },
-    "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj": {
+    "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj",
+        "projectUniqueName": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj",
         "projectName": "Visualizesse.Infrastructure",
-        "projectPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj",
+        "projectPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj",
         "packagesPath": "/Users/vagnerwentz/.nuget/packages/",
-        "outputPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Infrastructure/obj/",
+        "outputPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vagnerwentz/.nuget/NuGet/NuGet.Config"
@@ -183,8 +187,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj": {
-                "projectPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj"
+              "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj": {
+                "projectPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj"
               }
             }
           }
@@ -246,14 +250,14 @@
         }
       }
     },
-    "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Service/Visualizesse.Service.csproj": {
+    "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Service/Visualizesse.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Service/Visualizesse.Service.csproj",
+        "projectUniqueName": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Service/Visualizesse.Service.csproj",
         "projectName": "Visualizesse.Service",
-        "projectPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Service/Visualizesse.Service.csproj",
+        "projectPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Service/Visualizesse.Service.csproj",
         "packagesPath": "/Users/vagnerwentz/.nuget/packages/",
-        "outputPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Service/obj/",
+        "outputPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Service/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vagnerwentz/.nuget/NuGet/NuGet.Config"
@@ -268,11 +272,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj": {
-                "projectPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj"
+              "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj": {
+                "projectPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj"
               },
-              "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj": {
-                "projectPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj"
+              "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj": {
+                "projectPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Infrastructure/Visualizesse.Infrastructure.csproj"
               }
             }
           }
@@ -287,6 +291,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.2, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.2.0, )"

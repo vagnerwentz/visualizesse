@@ -1,5 +1,8 @@
+using System.Net;
 using MediatR;
+using Visualizesse.Domain.Exceptions;
 using Visualizesse.Service.Commands.User;
+using Visualizesse.Service.Validators.User;
 
 namespace Visualizesse.API.Endpoints;
 
@@ -25,6 +28,11 @@ public class UserService(ILogger<UserService> logger, IMediator mediator)
 {
     public async Task<IResult> CreateUserAsync(SignUpCommand data)
     {
+        var validatorResult = new SignUpCommandValidator().Validate(data);
+        if (!validatorResult.IsValid)
+        {
+            return TypedResults.UnprocessableEntity(OperationResult.FailureResult(validatorResult.Errors.Select(e => e.ErrorMessage).ToArray()[0], HttpStatusCode.UnprocessableEntity));
+        }
         var result = await mediator.Send(data);
         
         if (result.Success == false)

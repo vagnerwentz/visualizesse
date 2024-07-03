@@ -23,7 +23,10 @@ public class SignInCommandHandler(
         if (!isEqual) return OperationResult.FailureResult("Please, verify if you are typing the e-mail and password correctly.", HttpStatusCode.BadRequest);
         
         var token = authService.GenerateJWTToken(user);
-
-        return OperationResult.SuccessResult(token, HttpStatusCode.Accepted);
+        object data = new
+        {
+            token
+        };
+        return OperationResult.SuccessResult(data, HttpStatusCode.Accepted);
     }
 }

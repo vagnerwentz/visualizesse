@@ -9,30 +9,22 @@ using Visualizesse.Domain.Services;
 
 namespace Visualizesse.Service.Commands.User;
 
-public class SignUpCommandHandler : IRequestHandler<SignUpCommand, OperationResult>
+public class SignUpCommandHandler(
+    IAuthService authService,
+    IUserRepository userRepository)
+    : IRequestHandler<SignUpCommand, OperationResult>
 {
-    private readonly IAuthService _authService;
-    private readonly IUserRepository _userRepository;
-    
-    public SignUpCommandHandler(
-        IAuthService authService,
-        IUserRepository userRepository)
-    {
-        _authService = authService;
-        _userRepository = userRepository;
-    }
-
     public async Task<OperationResult> Handle(SignUpCommand request, CancellationToken cancellationToken)
     {
         try
         {
-            var emailAlreadyExists = await _userRepository.FindEmailAsync(request.Email,cancellationToken);
+            var emailAlreadyExists = await userRepository.FindEmailAsync(request.Email,cancellationToken);
 
             if (emailAlreadyExists) return OperationResult.FailureResult("E-mail is already in use.", HttpStatusCode.Conflict);
             
-            var user = new UserEntity(Guid.NewGuid(), request.Name, request.Email, _authService.ComputeSHA256Hash(request.Password));
+            var user = new UserEntity(Guid.NewGuid(), request.Name, request.Email, authService.ComputeSHA256Hash(request.Password));
 
-            await _userRepository.CreateUserAsync(user, cancellationToken);
+            await userRepository.CreateUserAsync(user, cancellationToken);
 
             return OperationResult.SuccessResult(user, HttpStatusCode.Created);
         }

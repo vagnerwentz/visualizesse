@@ -10,9 +10,9 @@ public static class WalletEndpoints
 {
     public static void RegisterWalletEndpoints(this IEndpointRouteBuilder routes) 
     {
-        var subcategories = routes.MapGroup("api/v1/wallet");
+        var wallet = routes.MapGroup("api/v1/wallet");
 
-        subcategories.MapPost("create", async (
+        wallet.MapPost("create", async (
             HttpContext httpContext,
             WalletService walletService,
             CreateWalletRequest data
@@ -21,7 +21,7 @@ public static class WalletEndpoints
             .WithOpenApi(operation => new(operation)
         {
             Summary = "Criar uma carteira para o seu usuário.",
-            Description = "Para criar uma subcategoria, você deverá passar o header `x-user-identification`."
+            Description = "Para criar uma wallet, você deverá passar o header `x-user-identification`."
         });
 
     }

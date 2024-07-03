@@ -11,17 +11,18 @@ public static class TransactionEndpoints
     public static void RegisterTransactionEndpoints(this IEndpointRouteBuilder routes) 
     {
         var transactions = routes.MapGroup("api/v1/transactions");
-
+        
         transactions.MapPost("create", async (
             HttpContext httpContext,
             TransactionService transactionService,
             TransactionCommand data
         ) => await transactionService.CreateTransactionAsync(data, httpContext))
+            .RequireAuthorization()
             .WithOpenApi(operation => new(operation)
             {
                 Summary = "Você poderá criar uma transação para o seu usuário.",
                 Description = "Você deve usar no header `x-user-identification` que é o identificador do seu usuário e passar os campos necessários de uma transação."
-            });;;
+            });
         
         transactions.MapGet("mine", async (
             HttpContext httpContext,
@@ -31,7 +32,7 @@ public static class TransactionEndpoints
             {
                 Summary = "Você obterá todas as suas transações.",
                 Description = "Você deve usar no header `x-user-identification` que é o identificador do seu usuário."
-            });;
+            });
         
         transactions.MapPut("edit", async (
             TransactionService transactionService,
@@ -75,7 +76,7 @@ public class TransactionService(ILogger<TransactionService> logger, IMediator me
             return TypedResults.BadRequest(result);
         }
         
-        return TypedResults.Ok();
+        return TypedResults.Ok(result);
     }
 
     public async Task<IResult> GetMineTransactionsAsync(HttpContext httpContext)

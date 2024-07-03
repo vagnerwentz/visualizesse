@@ -19,6 +19,8 @@ public class DeleteTransactionCommandHandler(
     {
         try
         {
+            var n = DateTime.UtcNow;
+            var date = new DateOnly();
             using var transaction = await databaseContext.Database.BeginTransactionAsync(cancellationToken);
             var transactionToBeDeleted = await transactionRepository.GetTransactionByIdAsync(request.Id, cancellationToken);
 

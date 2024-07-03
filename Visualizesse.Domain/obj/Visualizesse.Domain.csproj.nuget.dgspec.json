@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj": {}
+    "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj": {}
   },
   "projects": {
-    "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj": {
+    "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj",
+        "projectUniqueName": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj",
         "projectName": "Visualizesse.Domain",
-        "projectPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj",
+        "projectPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Domain/Visualizesse.Domain.csproj",
         "packagesPath": "/Users/vagnerwentz/.nuget/packages/",
-        "outputPath": "/Users/vagnerwentz/Projects/Visualizesse/Visualizesse.Domain/obj/",
+        "outputPath": "/Users/vagnerwentz/Projects/visualizesse/Visualizesse.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vagnerwentz/.nuget/NuGet/NuGet.Config"
@@ -41,6 +41,10 @@
             "MediatR.Contracts": {
               "target": "Package",
               "version": "[2.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             }
           },
           "imports": [

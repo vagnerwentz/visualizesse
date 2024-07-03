@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>true</InvariantGlobalization>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,8 +27,7 @@
     <ProjectReference Include="..\Visualizesse.Infrastructure\Visualizesse.Infrastructure.csproj" />
   </ItemGroup>
 
-   <ItemGroup>
-     <Content Remove="appsettings.IntegrationTest.json" />
-   </ItemGroup>
-
+  <ItemGroup>
+      <InternalsVisibleTo Include="PoupaGasto.IntegrationTest" />
+  </ItemGroup>
 </Project>

@@ -70,6 +70,28 @@ public class UserEndpointsIntegrationTest
         Assert.Equal("E-mail is already in use.", result.Message);
     }
     
+    [Fact(DisplayName = $"POST {RegisterUrl} should return HTTP 422 UnprocessableEntity when the password is weak.")]
+    public async Task PostRegisterUser_WithWeakPassword_ReturnsUnprocessableEntity()
+    {
+        // Arrange
+        var client = _factory.CreateClient();
+        var command = new SignUpCommand("John Doe", "johndoe@poupagasto.com.br", "abc");
+        var stringContent = new StringContent(JsonConvert.SerializeObject(command), Encoding.UTF8, "application/json");
+        SetupInitialData();
+        
+        // Act
+        var response = await client.PostAsync(RegisterUrl, stringContent);
+        
+        // Assert
+        var responseData = await response.Content.ReadAsStringAsync();
+        var result = JsonConvert.DeserializeObject<OperationResult>(responseData);
+        
+        Assert.NotNull(result);
+        Assert.False(result.Success);
+        Assert.Equal(HttpStatusCode.UnprocessableContent, result.StatusCode);
+        Assert.Equal("A senha deve conter pelo menos 8 caracteres, um número, uma letra minúscula e maiúscula e um caracetere especial.", result.Message);
+    }
+    
     [Fact(DisplayName = $"POST {RegisterUrl} with invalid data should return HTTP 500 InternalServerError and indicate an invalid operation.")]
     public async Task PostRegisterUser_WithInvalidOperation_ReturnsInternalServerError()
     {

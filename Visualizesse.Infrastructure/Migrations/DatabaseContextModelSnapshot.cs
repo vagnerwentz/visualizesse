@@ -37,7 +37,7 @@ namespace Visualizesse.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Category", (string)null);
                 });
 
             modelBuilder.Entity("Visualizesse.Domain.Entities.Subcategory", b =>
@@ -66,7 +66,7 @@ namespace Visualizesse.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Subcategory");
+                    b.ToTable("Subcategory", (string)null);
                 });
 
             modelBuilder.Entity("Visualizesse.Domain.Entities.Transaction", b =>
@@ -113,7 +113,7 @@ namespace Visualizesse.Infrastructure.Migrations
 
                     b.HasIndex("WalletId");
 
-                    b.ToTable("Transaction");
+                    b.ToTable("Transaction", (string)null);
                 });
 
             modelBuilder.Entity("Visualizesse.Domain.Entities.User", b =>
@@ -139,7 +139,7 @@ namespace Visualizesse.Infrastructure.Migrations
 
                     b.HasKey("Uuid");
 
-                    b.ToTable("User");
+                    b.ToTable("User", (string)null);
                 });
 
             modelBuilder.Entity("Visualizesse.Domain.Entities.Wallet", b =>
@@ -161,7 +161,7 @@ namespace Visualizesse.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Wallet");
+                    b.ToTable("Wallet", (string)null);
                 });
 
             modelBuilder.Entity("Visualizesse.Domain.Entities.Subcategory", b =>

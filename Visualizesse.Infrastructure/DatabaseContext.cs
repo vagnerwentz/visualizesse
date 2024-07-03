@@ -1,5 +1,6 @@
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Visualizesse.Domain.Entities;
 
 namespace Visualizesse.Infrastructure;
@@ -20,5 +21,15 @@ public class DatabaseContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(100); // Limita o tamanho máximo para 100 caracteres
+
+            // Adicionando uma Check Constraint para garantir que o nome não seja uma string vazia
+            entity.HasCheckConstraint("CK_User_Name_NotEmpty", "\"Name\" <> ''");
+        });
     }
 }
