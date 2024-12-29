@@ -22,7 +22,7 @@ public class SignUpCommandHandler(
 
             if (emailAlreadyExists) return OperationResult.FailureResult("E-mail is already in use.", HttpStatusCode.Conflict);
             
-            var user = new UserEntity(Guid.NewGuid(), request.Name, request.Email, authService.ComputeSHA256Hash(request.Password));
+            var user = new UserEntity(Guid.NewGuid(), string.IsNullOrEmpty(request.Name) ? null : request.Name, request.Email, authService.ComputeSHA256Hash(request.Password));
 
             await userRepository.CreateUserAsync(user, cancellationToken);
 

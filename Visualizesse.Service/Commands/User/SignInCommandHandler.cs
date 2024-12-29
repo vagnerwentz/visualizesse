@@ -6,6 +6,8 @@ using Visualizesse.Domain.Services;
 
 namespace Visualizesse.Service.Commands.User;
 
+
+public record Reponse(string Token, string Name, string Email);
 public class SignInCommandHandler(
     IAuthService authService,
     IUserRepository userRepository
@@ -23,10 +25,9 @@ public class SignInCommandHandler(
         if (!isEqual) return OperationResult.FailureResult("Please, verify if you are typing the e-mail and password correctly.", HttpStatusCode.BadRequest);
         
         var token = authService.GenerateJWTToken(user);
-        object data = new
-        {
-            token
-        };
+
+        var data = new Reponse(token, user.Name, user.Email);
+        
         return OperationResult.SuccessResult(data, HttpStatusCode.Accepted);
     }
 }
