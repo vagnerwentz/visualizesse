@@ -7,7 +7,9 @@ public class TransactionViewModel(
     decimal value,
     string transactionType,
     string categoryDescription,
-    string? subcategoryDescription)
+    string? subcategoryDescription,
+    string? icon
+    )
 {
     public Guid Id { get; private set; } = id;
     public decimal Value { get; private set; } = value;
@@ -16,4 +18,5 @@ public class TransactionViewModel(
     public string TransactionType { get; private set; } = transactionType;
     public string CategoryDescription { get; private set; } = categoryDescription;
     public string? SubcategoryDescription { get; private set; } = subcategoryDescription;
+    public string? Icon { get; private set; } = icon;
 }
