@@ -20,7 +20,10 @@ public class GetMineTransactionQueryHandler(ITransactionRepository transactionRe
                     t.Value,
                     t.TransactionType,
                     t.Category.Description,
-                    t.Subcategory?.Description))
+                    t.Subcategory?.Description,
+                    t.Subcategory?.Icon
+                    )
+            )
             .ToList();
 
         return transactionViewModel;
